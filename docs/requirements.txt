@@ -1,0 +1,6 @@
+black
+griffe-generics
+griffe-modernized-annotations
+mkdocs
+mkdocs-material
+mkdocstrings[python]

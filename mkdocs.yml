@@ -1,0 +1,74 @@
+site_name: python-process
+site_url: https://python-process.readthedocs.io
+site_author: Jonghwan Hyeon
+site_description: A Python package designed to simplify the spawning and management of processes
+
+repo_url: https://github.com/jonghwanhyeon/python-process
+repo_name: jonghwanhyeon/python-process
+
+nav:
+  - Overview: index.md
+  - Examples:
+    - examples/running-command.md
+    - examples/capturing-outputs.md
+    - examples/sending-inputs.md
+    - examples/complicated-scenario.md
+  - API Reference: api.md
+
+theme:
+  name: material
+  palette:
+    primary: blue grey
+  icon:
+    logo: material/dock-window
+    repo: simple/github
+  features:
+    - content.code.annotate
+
+extra_css:
+  - extra/stylesheet.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://typing-extensions.readthedocs.io/en/stable/objects.inv
+          options:
+            # general
+            show_bases: false
+            show_source: true
+            # headings
+            show_root_heading: true
+            show_root_full_path: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            # members
+            inherited_members: true
+            members_order: source
+            # signatures
+            show_signature: true
+            show_signature_annotations: true
+            separate_signature: true
+            signature_crossrefs: true
+            extensions:
+              - griffe_modernized_annotations
+              - griffe_generics
+
+watch:
+  - process

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+target-version = "py37"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 100
+
+[tool.ruff.lint]
+extend-select = ["ANN", "ASYNC", "I", "D", "UP"]
+ignore = ["ANN101", "ANN401","D100"]
+
+[tool.ruff.lint.per-file-ignores]
+"!**/process.py" = ["D"]
+"**/{tests}/*" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.pytest.ini_options]
+markers = ["asyncio"]
