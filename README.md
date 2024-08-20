@@ -14,7 +14,7 @@ $ pip install python-process
 ```
 
 ## Usage
-You can find more examples in [the documentation](https://python-process.readthedocs.io/examples/running-command/).
+You can find more examples in [the documentation](https://python-process.readthedocs.io/en/stable/examples/running-command/).
 
 ### Synchronous API
 ```python
